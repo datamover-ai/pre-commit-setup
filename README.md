@@ -96,8 +96,9 @@ git commit -m "[pre-commit] Hello world"
 
 ![after pre-commit](./images/after.png)
 
-This time there are no <span style="color:red">Failed</span> tests and you can finally push your changes on github.
+This time there are no Failed tests and you can finally push your changes on github.
 
+---
 **Note**: in the case you want to avoid running pre-commit add the option `--no-verify` i.e.:
 ```shell
 git commit --no-verify -m “commit my changes”
