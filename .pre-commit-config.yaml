@@ -6,8 +6,8 @@ repos:
     hooks:
     - id: black
       language_version: python3.9
-    - id: black-jupyter
-      language_version: python3.9
+#    - id: black-jupyter
+#      language_version: python3.9
 
 # Flake8 is a wrapper around these tools:
 #   o pyflakes checks Python source files for errors
@@ -62,21 +62,32 @@ repos:
         types: [python]
         stages: [commit]
 
-# it automatically reorders python imports. useful to avoid merge conflicts
--   repo: https://github.com/asottile/reorder_python_imports
-    rev: 'v3.8.2'
+# it automatically reorders python imports provided by PyCQA
+-   repo: https://github.com/PyCQA/isort
+    rev: '5.10.1'
     hooks:
-    -  id: reorder-python-imports
+    -  id: isort
 
-# A security linter from PyCQA
+# A security linter provided by PyCQA
 -   repo: https://github.com/PyCQA/bandit
-    rev: 1.7.4
+    rev: '1.7.4'
     hooks:
     - id: bandit
 
 # Useful pre-commit hooks for checking Dockerfiles for issues.
 - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
-  rev: v0.1.0
+  rev: 'v0.1.0'
   hooks:
   - id: dockerfilelint
     stages: [commit]
+
+# Several hooks tailored for Jupyter Notebook
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.4.0
+  hooks:
+    - id: nbqa            # tandard Python code quality tool on a Jupyter Notebook
+    - id: nbqa-black      # 'black' on a Jupyter Notebook
+    - id: nbqa-flake8     # 'flake8' on a Jupyter Notebook
+    - id: nbqa-isort      # 'isort' on a Jupyter Notebook
+    - id: nbqa-mypy       # 'mypy' on a Jupyter Notebook
+    - id: nbqa-pylint     # 'pylint' on a Jupyter Notebook
