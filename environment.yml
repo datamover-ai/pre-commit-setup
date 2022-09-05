@@ -1,9 +1,4 @@
-channels:
-  - defaults
-  - conda-forge
-  - anaconda
-dependencies:
-  - jupyterlab
-  - numpy
-  - pre_commit
-  - pytest
+numpy
+pre_commit
+pytest
+jupyterlab

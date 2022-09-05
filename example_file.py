@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 x = {"a": 37, "b": 42, "c": True}
 if x["c"] is not None and x["a"] > 0 or x["b"] <= 214:
     z = "hello " + "world"
@@ -17,9 +16,14 @@ class Foo(object):
         return y
 
 
-# fmt: off
 custom_formatting = [
-    0,  1,  2,
-    3,  4,  5,
-    6,  7,  8,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
 ]
