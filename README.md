@@ -91,4 +91,6 @@ git add .
 git commit -m "[pre-commit] Hello pre-commit"
 ```
 
+This time all the tests are passed and you can finally push your changes on github.
+
 For more information about pre-commit check the [documentation](https://pre-commit.com).
