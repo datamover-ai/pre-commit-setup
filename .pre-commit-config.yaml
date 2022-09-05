@@ -5,7 +5,7 @@ repos:
     rev: '22.8.0'
     hooks:
     - id: black
-
+    - id: black-jupyter
 
 # Flake8 is a wrapper around these tools:
 #   o pyflakes checks Python source files for errors
@@ -72,10 +72,3 @@ repos:
   hooks:
   - id: dockerfilelint
     stages: [commit]
-
-# Several hooks tailored for Jupyter Notebook
-- repo: https://github.com/nbQA-dev/nbQA
-  rev: 1.4.0
-  hooks:
-    - id: nbqa-black      # 'black' on a Jupyter Notebook
-    - id: nbqa-isort      # 'isort' on a Jupyter Notebook
