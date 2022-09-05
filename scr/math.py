@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# function defined to test pytest local hook
 import numpy as np
 
 
