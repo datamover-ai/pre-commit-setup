@@ -54,7 +54,7 @@ repos:
     hooks:
      -  id: tests
         name: pytest
-        entry: conda run pytest --benchmark-skip
+        entry: conda run pytest
         pass_filenames: false
         language: system
         types: [python]
@@ -65,12 +65,6 @@ repos:
     rev: '5.10.1'
     hooks:
     -  id: isort
-
-# A security linter provided by PyCQA
--   repo: https://github.com/PyCQA/bandit
-    rev: '1.7.4'
-    hooks:
-    - id: bandit
 
 # Useful pre-commit hooks for checking Dockerfiles for issues.
 - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
@@ -83,9 +77,5 @@ repos:
 - repo: https://github.com/nbQA-dev/nbQA
   rev: 1.4.0
   hooks:
-    - id: nbqa            # tandard Python code quality tool on a Jupyter Notebook
     - id: nbqa-black      # 'black' on a Jupyter Notebook
-    - id: nbqa-flake8     # 'flake8' on a Jupyter Notebook
     - id: nbqa-isort      # 'isort' on a Jupyter Notebook
-    - id: nbqa-mypy       # 'mypy' on a Jupyter Notebook
-    - id: nbqa-pylint     # 'pylint' on a Jupyter Notebook
