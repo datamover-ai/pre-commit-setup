@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# function defined to test pytest local hook
+
 import numpy as np
 
 
-def calculate_log(x: np.array) -> np.array:
+def calculate_log(x):
     """_summary_
 
     Args:
@@ -12,5 +12,4 @@ def calculate_log(x: np.array) -> np.array:
     Returns:
         np.array: natural logarithm of x
     """
-
     return np.log(x)
