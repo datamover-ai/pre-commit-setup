@@ -45,7 +45,7 @@ repos:
     - id: pretty-format-json   # Checks that all your JSON files are pretty.
       args: ['--autofix', '--indent=2', '--no-sort-keys'] # automatically format json files
     - id: name-tests-test      # verifies that test files are named correctly.
-      args: ['--pytest']       # test suite used within the project
+      args: ['--pytest-test-first'] # ensure tests match test_.*\.py
       #exclude: ^tests/folder/file_name # example of file to exclude
 
 # Static type checker for Python
