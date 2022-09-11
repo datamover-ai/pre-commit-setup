@@ -24,9 +24,6 @@ repos:
     hooks:
     - id: flake8
       entry: python3.9 -m flake8
-      args:
-      # making isort line length compatible with black
-      - "--ignore=E203, W503" # ignore whitespace before : and linebreak before binary operator (conflicting)
       additional_dependencies: [flake8-docstrings]
 
 
@@ -42,6 +39,7 @@ repos:
       args: ['--maxkb=10000']  # 10 Mb limit
     - id: check-json           # Attempts to load all json files to verify syntax.
     - id: fix-encoding-pragma  # Add "# -*- coding: utf-8 -*-"" to the top of python files.
+    - id: detect-private-key   # Checks existence of private keys    
     - id: detect-aws-credentials # Checks existence of AWS secrets keys
       args: ['--allow-missing-credentials'] # Allow hook to pass when no credentials are detected
     - id: pretty-format-json   # Checks that all your JSON files are pretty.
