@@ -42,6 +42,20 @@ custom_formatting = [
 ]
 ```
 
+Create a json file called `example_json.json` containing the following code:
+```json
+{
+"glossary": {"title": "example glossary",
+"GlossDiv": {"title": "S","GlossList": {"GlossEntry": {"ID": "SGML","SortAs": "SGML",
+"GlossTerm": "Standard Generalized Markup Language",
+"Acronym": "SGML","Abbrev": "ISO 8879:1986",
+"GlossDef": {"para": "A meta-markup language, used to create markup languages such as DocBook.",
+"GlossSeeAlso": ["GML","XML"]
+},
+"GlossSee": "markup"}}}}}
+
+```
+
 Commit your work
 
 ```shell
@@ -85,6 +99,36 @@ custom_formatting = [
     7,
     8,
 ]
+```
+
+while `example_json.json` will look like this:
+
+```json
+{
+  "glossary": {
+    "title": "example glossary",
+    "GlossDiv": {
+      "title": "S",
+      "GlossList": {
+        "GlossEntry": {
+          "ID": "SGML",
+          "SortAs": "SGML",
+          "GlossTerm": "Standard Generalized Markup Language",
+          "Acronym": "SGML",
+          "Abbrev": "ISO 8879:1986",
+          "GlossDef": {
+            "para": "A meta-markup language, used to create markup languages such as DocBook.",
+            "GlossSeeAlso": [
+              "GML",
+              "XML"
+            ]
+          },
+          "GlossSee": "markup"
+        }
+      }
+    }
+  }
+}
 ```
 
 Commit the new changes:
