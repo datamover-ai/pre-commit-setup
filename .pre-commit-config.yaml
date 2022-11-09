@@ -60,12 +60,12 @@ repos:
         types: [python]
         stages: [commit]
 
-# It automatically reorders python imports provided by PyCQA
--   repo: https://github.com/PyCQA/isort
-    rev: '5.10.1'
-    hooks:
-    - id: isort
-      args: ["black", "--profile"]
+# # It automatically reorders python imports provided by PyCQA
+# -   repo: https://github.com/PyCQA/isort
+#     rev: '5.10.1'
+#     hooks:
+#     - id: isort
+#       args: ["black", "--profile"]
 
 # Run linter to dockerfile
 - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
