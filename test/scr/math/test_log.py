@@ -11,4 +11,4 @@ class TestLog:
     def test_function(self):
         """Check that log(1) = 0."""
         result = calculate_log(x=1)
-        assert result == pytest.approx(0, rel=1e-06, abs=1e-06)
+        assert result == pytest.approx(0, rel=1e-09, abs=1e-09)
