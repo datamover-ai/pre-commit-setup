@@ -17,4 +17,4 @@ Install the git hook scripts
 pre-commit install
 ```
 
-You can read more about the pre-commit and its usage on this ![article](https://www.datamover.ai/post/boost-your-coding-productivity-with-this-tool)
+You can read more about pre-commit and its usage on this [article](https://www.datamover.ai/post/boost-your-coding-productivity-with-this-tool).
