@@ -3,7 +3,7 @@
 import numpy as np
 
 
-def calculate_log(x):
+def calculate_log(x: float) -> float:
     """_summary_
 
     Args:

@@ -2,7 +2,7 @@
 # Code Formatter: based on pycodestyle (formerly called PEP8)
 repos:
 -   repo: https://github.com/ambv/black
-    rev: '22.8.0'
+    rev: 22.8.0
     hooks:
     - id: black-jupyter
       args:
@@ -14,7 +14,7 @@ repos:
       language_version: python3.9
 
 -   repo: https://github.com/pycqa/flake8
-    rev: '5.0.4'
+    rev: 5.0.4
     hooks:
     - id: flake8
       args:
@@ -24,7 +24,7 @@ repos:
 
 # Hooks provided by pre-commit.
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: 'v4.2.0'
+    rev: v4.2.0
     hooks:
     - id: check-yaml
     - id: sort-simple-yaml
@@ -44,7 +44,7 @@ repos:
 
 # Static type checker for Python
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'v0.950'
+    rev: v0.991
     hooks:
     - id: mypy
       args: [--no-strict-optional, --ignore-missing-imports]
@@ -60,16 +60,9 @@ repos:
         types: [python]
         stages: [commit]
 
-# # It automatically reorders python imports provided by PyCQA
-# -   repo: https://github.com/PyCQA/isort
-#     rev: '5.10.1'
-#     hooks:
-#     - id: isort
-#       args: ["black", "--profile"]
-
 # Run linter to dockerfile
 - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
-  rev: 'v0.1.0'
+  rev: v0.1.0
   hooks:
   - id: dockerfilelint
     stages: [commit]
